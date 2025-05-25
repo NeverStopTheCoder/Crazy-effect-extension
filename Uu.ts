@@ -444,4 +444,25 @@ namespace glitchEffect {
 
         sprite.setImage(newImg)
     }
+    //%block="apply old Fashion TV glitch effect"
+    export function s(): void {
+    
+let ScreenCopy = image.create(160, 120)
+let F = 1
+let mySprite2 = sprites.create(ScreenCopy, SpriteKind.Player)
+game.onUpdate(function () {
+if (Math.percentChance(100)) {
+            for (let x3 = 0; x3 <= 159; x3++) {
+                for (let y5 = 0; y5 <= 119; y5++) {
+                    if (Math.percentChance(50)) {
+                        ScreenCopy.setPixel(x3, y5, 1)
+                    } else {
+                        ScreenCopy.setPixel(x3, y5, 15)
+                    }
+                }
+    }
+
+}
+})
+    }
 }
